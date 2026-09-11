@@ -6,4 +6,3 @@ frontend/dist
 /Makefile-mac-arm
 /Makefile-mac-intel
 dist/
-/prebuilt/
