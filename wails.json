@@ -1,0 +1,20 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "eml_xtract",
+  "outputfilename": "EML Xtract",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Alex Panagides",
+    "email": "alex@mxhero.com"
+  },
+  "info": {
+    "companyName": "mxHERO",
+    "productName": "EML Xtract",
+    "productVersion": "0.1.0",
+    "copyright": "Copyright © 2026 mxHERO",
+    "comments": "Extract attachments from .eml and .msg files"
+  }
+}

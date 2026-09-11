@@ -1,0 +1,9 @@
+build/bin
+node_modules
+frontend/dist
+.idea
+.DS_Store
+/Makefile-mac-arm
+/Makefile-mac-intel
+dist/
+/prebuilt/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EML Xtract</title>
+    <link rel="stylesheet" href="./src/style.css"/>
+</head>
+<body>
+<div id="app" style="--wails-drop-target: drop">
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">📎</span>
+            <div>
+                <h1>EML Xtract</h1>
+                <p class="subtitle">Pull attachments out of .eml and .msg files</p>
+            </div>
+        </div>
+        <div id="status" class="pill pill-muted">checking ripmime…</div>
+    </header>
+
+    <section class="controls">
+        <label class="row">
+            <span class="label">Save to</span>
+            <input id="outdir" type="text" spellcheck="false" placeholder="~/Downloads/EML Xtract"/>
+            <button id="choose-out" class="btn" title="Choose output folder">Choose…</button>
+            <button id="open-out" class="btn btn-ghost" title="Open output folder in Finder">Open</button>
+        </label>
+        <label class="row opt">
+            <input id="include-nameless" type="checkbox"/>
+            <span>Also save unnamed parts (message body text, inline images) from .eml files</span>
+        </label>
+    </section>
+
+    <section id="dropzone" class="dropzone" style="--wails-drop-target: drop" tabindex="0">
+        <div class="dz-inner">
+            <div class="dz-icon">⬇︎</div>
+            <div class="dz-title">Drop .eml or .msg files here</div>
+            <div class="dz-sub">Folders work too. Or <button id="browse" class="linklike">browse…</button></div>
+        </div>
+    </section>
+
+    <section id="progress" class="progress hidden">
+        <div class="bar"><div id="bar-fill" class="bar-fill"></div></div>
+        <div id="progress-text" class="progress-text"></div>
+    </section>
+
+    <section id="summary" class="summary hidden">
+        <span id="summary-text"></span>
+        <span class="spacer"></span>
+        <button id="reveal-all" class="btn">Show in Finder</button>
+        <button id="clear" class="btn btn-ghost">Clear</button>
+    </section>
+
+    <section id="results" class="results"></section>
+</div>
+<script src="./src/main.js" type="module"></script>
+</body>
+</html>
